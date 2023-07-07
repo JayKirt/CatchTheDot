@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         playerRect.bottom > targetRect.top
       ) {
         alert('You caught the target!');
+        resetTarget();
       }
     }
   
@@ -58,8 +59,24 @@ document.addEventListener('DOMContentLoaded', () => {
       target.style.top = `${targetY}px`;
     }
   
-    target.directionX = 2; // Initial X direction
-    target.directionY = 2; // Initial Y direction
+    function resetTarget() {
+      const minX = 0;
+      const maxX = gameBoard.clientWidth - target.offsetWidth;
+      const minY = 0;
+      const maxY = gameBoard.clientHeight - target.offsetHeight;
+  
+      const targetX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+      const targetY = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
+  
+      target.style.left = `${targetX}px`;
+      target.style.top = `${targetY}px`;
+  
+      target.directionX = Math.random() < 0.5 ? 2 : -2;
+      target.directionY = Math.random() < 0.5 ? 2 : -2;
+    }
+  
+    target.directionX = Math.random() < 0.5 ? 2 : -2; // Initial X direction
+    target.directionY = Math.random() < 0.5 ? 2 : -2; // Initial Y direction
   
     setInterval(moveTarget, 10); // Move the target every 10 milliseconds
   });
