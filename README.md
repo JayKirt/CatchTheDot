@@ -4,7 +4,7 @@ To do:<br>
 make the bounce pattern more random<br>
 
 How to modify speed: <br>
-In the script.js file modify the below code (which is annotated) to change the speed of the bouncing ball, c hanging the number from 10 will change the speed of the ball. The lower the number the faster the speed of the bouncing ball. <br>
+In the script.js file modify the below code (which is annotated) to change the speed of the bouncing ball, changing the number from 10 will change the speed of the ball. The lower the number the faster the speed of the bouncing ball. <br>
 setInterval(moveTarget, 10); <br>
 
 Modify gameboard size:<br>
