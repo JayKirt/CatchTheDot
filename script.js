@@ -47,13 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if (targetX <= minX || targetX >= maxX) {
         target.directionX *= -1;
-        targetX = Math.max(minX, Math.min(targetX, maxX));
       }
   
       if (targetY <= minY || targetY >= maxY) {
         target.directionY *= -1;
-        targetY = Math.max(minY, Math.min(targetY, maxY));
       }
+  
+      targetX = Math.max(minX, Math.min(targetX, maxX));
+      targetY = Math.max(minY, Math.min(targetY, maxY));
   
       target.style.left = `${targetX}px`;
       target.style.top = `${targetY}px`;
@@ -71,12 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
       target.style.left = `${targetX}px`;
       target.style.top = `${targetY}px`;
   
-      target.directionX = Math.random() < 0.5 ? 2 : -2;
-      target.directionY = Math.random() < 0.5 ? 2 : -2;
+      target.directionX = Math.random() < 0.5 ? -1 : 1;
+      target.directionY = Math.random() < 0.5 ? -1 : 1;
     }
   
-    target.directionX = Math.random() < 0.5 ? 2 : -2; // Initial X direction
-    target.directionY = Math.random() < 0.5 ? 2 : -2; // Initial Y direction
+    target.directionX = Math.random() < 0.5 ? -1 : 1; // Initial X direction
+    target.directionY = Math.random() < 0.5 ? -1 : 1; // Initial Y direction
   
     setInterval(moveTarget, 10); // Move the target every 10 milliseconds
   });
+  
