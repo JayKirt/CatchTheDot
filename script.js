@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = document.getElementById('target');
     const gameBoard = document.getElementById('game-board');
   
-    //gameboard size 
+    // Double the size of the game board
     gameBoard.style.width = '800px';
     gameBoard.style.height = '800px';
   
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const minY = 0;
       const maxY = gameBoard.clientHeight - targetHeight;
   
-      targetX += targetDirectionX;
-      targetY += targetDirectionY;
-  
+      targetX += targetDirectionX * 5; // Changing this will effect how the ball bounces off the walls
+      targetY += targetDirectionY * 5; // Changing this will effect how the ball bounces off the walls
+
       if (targetX <= minX || targetX >= maxX) {
         targetDirectionX *= -1;
       }
@@ -79,9 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     resetTarget();
   
-    setInterval(moveTarget, 2); // Edit this to vhange the speed of the the ball.
+    setInterval(moveTarget, 10); // modify this to change the speed of the bouncing ball
   
     // Debugging statement
     console.log('Game board:', gameBoard.clientWidth, gameBoard.clientHeight);
   });
-  
