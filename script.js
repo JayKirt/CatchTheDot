@@ -33,28 +33,33 @@ document.addEventListener('DOMContentLoaded', () => {
   
     function moveTarget() {
       const targetRect = target.getBoundingClientRect();
+      const targetWidth = target.offsetWidth;
+      const targetHeight = target.offsetHeight;
   
       const minX = 0;
-      const maxX = gameBoard.clientWidth - target.offsetWidth;
+      const maxX = gameBoard.clientWidth - targetWidth;
       const minY = 0;
-      const maxY = gameBoard.clientHeight - target.offsetHeight;
+      const maxY = gameBoard.clientHeight - targetHeight;
   
-      let targetX = targetRect.left + getRandomStep();
-      let targetY = targetRect.top + getRandomStep();
+      let targetX = targetRect.left + target.directionX;
+      let targetY = targetRect.top + target.directionY;
   
-      targetX = Math.max(minX, Math.min(targetX, maxX));
-      targetY = Math.max(minY, Math.min(targetY, maxY));
+      if (targetX <= minX || targetX >= maxX) {
+        target.directionX *= -1;
+        targetX = Math.max(minX, Math.min(targetX, maxX));
+      }
+  
+      if (targetY <= minY || targetY >= maxY) {
+        target.directionY *= -1;
+        targetY = Math.max(minY, Math.min(targetY, maxY));
+      }
   
       target.style.left = `${targetX}px`;
       target.style.top = `${targetY}px`;
     }
   
-    function getRandomStep() {
-      const minStep = -5; // Adjust the step size as desired
-      const maxStep = 5; // Adjust the step size as desired
+    target.directionX = 2; // Initial X direction
+    target.directionY = 2; // Initial Y direction
   
-      return Math.floor(Math.random() * (maxStep - minStep + 1)) + minStep;
-    }
-  
-    setInterval(moveTarget, 100); // Move the target every 100 milliseconds
+    setInterval(moveTarget, 10); // Move the target every 10 milliseconds
   });
