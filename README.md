@@ -3,7 +3,7 @@ A simple catch the dot game <br>
 <u> To do: </u><br>
 make the bounce pattern more random<br>
 
-<u>How to modify speed: </u> <br>
+<span "text-decoration: underline;"> How to modify speed: </span> <br>
 In the script.js file modify the below code (which is annotated) to change the speed of the bouncing ball, changing the number from 10 will change the speed of the ball. The lower the number the faster the speed of the bouncing ball. <br>
 <br>
 setInterval(moveTarget, 10); <br>
