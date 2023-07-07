@@ -1,7 +1,7 @@
 #game-board {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 800px;
+    height: 800px;
     background-color: lightblue;
   }
   
@@ -14,7 +14,6 @@
     height: 50px;
     background-color: red;
     border-radius: 50%;
-    animation: movePlayer 2s infinite alternate;
   }
   
   #target {
@@ -26,8 +25,8 @@
     background-color: green;
     border-radius: 50%;
   }
-  
-  @keyframes movePlayer {
+
+  /* @keyframes movePlayer {
     0% {
       transform: translate(-50%, -50%);
     }
@@ -49,4 +48,4 @@
     100% {
       transform: translate(0, 0);
     }
-  }
+  } */
