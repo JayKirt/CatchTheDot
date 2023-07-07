@@ -1,4 +1,4 @@
-<h1> <u>  CatchTheDot </u> </h1>
+<h1 "text-decoration: underline;" >CatchTheDot </h1>
 A simple catch the dot game <br>
 <u> To do: </u><br>
 make the bounce pattern more random<br>
