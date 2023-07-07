@@ -1,5 +1,5 @@
 # CatchTheDot
-A simple catch the dot game 
+A simple catch the dot game <br>
 To do:<br>
 make the bounce pattern more random<br>
 
