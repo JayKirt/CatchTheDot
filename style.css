@@ -1,0 +1,53 @@
+#game-board {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+  }
+  
+  #player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    animation: movePlayer 2s infinite alternate;
+  }
+  
+  #target {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: 50%;
+    animation: moveTarget 3s infinite alternate;
+  }
+  
+  @keyframes movePlayer {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  @keyframes moveTarget {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(50px, 50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
