@@ -1,4 +1,4 @@
-<u># CatchTheDot <u/>
+<h1> <u>  CatchTheDot </u> </h1>
 A simple catch the dot game <br>
 To do:<br>
 make the bounce pattern more random<br>
