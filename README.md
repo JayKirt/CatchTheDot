@@ -1,6 +1,7 @@
 <h1> <ins> CatchTheDot </ins> </h1>
 A simple catch the dot game <br>
- To do: <br>
+<br>
+<ins> To do: <br></ins>
 make the bounce pattern more random<br>
 
 <ins>How to modify speed:</ins>  <br>
