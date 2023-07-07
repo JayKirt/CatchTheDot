@@ -3,9 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = document.getElementById('target');
     const gameBoard = document.getElementById('game-board');
   
-    // Double the size of the game board
+    //gameboard size 
     gameBoard.style.width = '800px';
     gameBoard.style.height = '800px';
+  
+    let targetX = 100;
+    let targetY = 100;
+    let targetDirectionX = 2;
+    let targetDirectionY = 2;
   
     gameBoard.addEventListener('mousemove', (event) => {
       const x = event.clientX - gameBoard.offsetLeft;
@@ -33,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     function moveTarget() {
-      const targetRect = target.getBoundingClientRect();
       const targetWidth = target.offsetWidth;
       const targetHeight = target.offsetHeight;
   
@@ -42,19 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const minY = 0;
       const maxY = gameBoard.clientHeight - targetHeight;
   
-      let targetX = targetRect.left + target.directionX;
-      let targetY = targetRect.top + target.directionY;
+      targetX += targetDirectionX;
+      targetY += targetDirectionY;
   
       if (targetX <= minX || targetX >= maxX) {
-        target.directionX *= -1;
+        targetDirectionX *= -1;
       }
   
       if (targetY <= minY || targetY >= maxY) {
-        target.directionY *= -1;
+        targetDirectionY *= -1;
       }
-  
-      targetX = Math.max(minX, Math.min(targetX, maxX));
-      targetY = Math.max(minY, Math.min(targetY, maxY));
   
       target.style.left = `${targetX}px`;
       target.style.top = `${targetY}px`;
@@ -66,19 +67,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const minY = 0;
       const maxY = gameBoard.clientHeight - target.offsetHeight;
   
-      const targetX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
-      const targetY = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
+      targetX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+      targetY = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
   
       target.style.left = `${targetX}px`;
       target.style.top = `${targetY}px`;
   
-      target.directionX = Math.random() < 0.5 ? -1 : 1;
-      target.directionY = Math.random() < 0.5 ? -1 : 1;
+      targetDirectionX = Math.random() < 0.5 ? -2 : 2;
+      targetDirectionY = Math.random() < 0.5 ? -2 : 2;
     }
   
-    target.directionX = Math.random() < 0.5 ? -1 : 1; // Initial X direction
-    target.directionY = Math.random() < 0.5 ? -1 : 1; // Initial Y direction
+    resetTarget();
   
-    setInterval(moveTarget, 10); // Move the target every 10 milliseconds
+    setInterval(moveTarget, 2); // Edit this to vhange the speed of the the ball.
+  
+    // Debugging statement
+    console.log('Game board:', gameBoard.clientWidth, gameBoard.clientHeight);
   });
   
