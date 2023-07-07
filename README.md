@@ -21,5 +21,3 @@ Within the script.js file find the below code change the numners to change the d
 let targetDirectionX = 2;<br>
  let targetDirectionY = 2;<br>
 
-
- <p> <ul> This is some <span style="text-decoration: underline;">underlined text</span> in HTML.</ul></p>
