@@ -3,7 +3,14 @@
 
 <h4><ins> To do: </ins></h4> 
 
-<p>make the bounce pattern more random<p> 
+<ol>
+  <li> Make the bounce pattern more randomised.</li>
+  <li> Add a score.</li>
+  <li> Add a user inputted username.</li>
+  <li> Different variants of ball size and speed randomised on reset. </li>
+  <li> Less clunky reset feature, without an alert.</li>
+  <li> Changing gameboard shape</li>
+</ol>
 <br>
   
 <h3><ins>How to modify speed:</ins> </h3> 
