@@ -13,7 +13,7 @@
 </ol>
 <br>
   
-<h3><ins>How to modify speed:</ins> </h3> 
+<h3><ins>How to modify speed:</ins></h3> 
 <p>In the script.js file modify the below code (which is annotated) to change the speed of the bouncing ball, changing the number from 10 will change the speed of the ball. The lower the number the faster the speed of the bouncing ball. </p> 
 
 <p>setInterval(moveTarget, 10);</p> 
