@@ -23,8 +23,8 @@
 <p>Within the script.js file find the below lines of code (which is annotated) and change the numbers- currently set to  800px.</p> 
 <p>Change the numbers- currently 800px.</p> 
 
-<p>gameBoard.style.width = '800px'; <-- </p> 
-<p>gameBoard.style.height = '800px'; <-- </p> 
+<p>gameBoard.style.width = '800px'; <--</p> 
+<p>gameBoard.style.height = '800px'; <--</p> 
 <br>
 
 <h3><ins>Modify bounce direction:</ins></h3> 
