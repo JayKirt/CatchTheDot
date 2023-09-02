@@ -1,7 +1,7 @@
 <h1><ins>Catch The Dot.</ins></h1>
 <h2>A simple catch the dot game</h2> 
 
-<h4><ins> To do: </ins></h4> 
+<h4><ins>To do:</ins></h4> 
 
 <ol>
   <li> Make the bounce pattern more randomised.</li>
