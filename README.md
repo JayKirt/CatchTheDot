@@ -6,7 +6,7 @@
 <ol>
   <li>Make the bounce pattern more randomised.</li>
   <li>Add a score.</li>
-  <li> Add a user inputted username.</li>
+  <li>Add a user inputted username.</li>
   <li>Different variants of ball size and speed randomised on reset.</li>
   <li> Less clunky reset feature, without an alert.</li>
   <li> Changing gameboard shape</li>
