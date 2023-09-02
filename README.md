@@ -31,5 +31,5 @@
 <p>Within the script.js file find the below code change the numners to change the direction of the bounce on both the X and Y axis.</p>  
 
 <p>let targetDirectionX = 2;</p>
-<p> let targetDirectionY = 2; </p>
+<p>let targetDirectionY = 2; </p>
 
