@@ -4,8 +4,8 @@
 <h4><ins>To do:</ins></h4> 
 
 <ol>
-  <li> Make the bounce pattern more randomised.</li>
-  <li> Add a score.</li>
+  <li>Make the bounce pattern more randomised.</li>
+  <li>Add a score.</li>
   <li> Add a user inputted username.</li>
   <li> Different variants of ball size and speed randomised on reset. </li>
   <li> Less clunky reset feature, without an alert.</li>
